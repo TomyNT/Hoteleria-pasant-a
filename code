@@ -1,0 +1,27 @@
+def clear():
+    import os
+    os.system("cls")
+def hab():
+    from datetime import date, time, datetime, timedelta
+    hora= datetime.now()
+    est= int(input("¿En que estado se encuntra la habitación? ([1]limpia o [2]sucia) "))
+
+    if est == 1:
+        enc=(input("Persona encargada de la limpieza: "))
+        obs=(input("Observaciones: "))
+        if obs=="":
+            obs="no se hicieron observaciones"
+        
+
+        print("Fecha y hora de la limpieza registrada: ",hora)
+        print("Persona encargada la limpieza:",enc)
+        print("Observaciones:",obs)
+            
+    elif est == 2:
+        print("La habitación",num,"sigue estando sucia")
+    else:
+            print("ingrese una respuesta valida")
+
+#hora = datetime.time(hour,minute)
+num=int(input("Ingrese el número de la habitación:"))
+hab()
